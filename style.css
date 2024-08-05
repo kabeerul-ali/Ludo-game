@@ -1,0 +1,128 @@
+#grid-container {
+    height: 382px;
+    width: 382px;
+    background-color: aliceblue;
+    border: 5px solid black;
+    margin-top: 80px;
+    margin-left: 34vw;
+    position: relative; /* added this to create a containing block */
+    border-radius: 10px;
+}
+body{
+    background-color: bisque;
+}
+#red {
+    height: 153px;
+    width: 153px;
+    background-color: red;
+    border: 1px solid black;
+    position: absolute;
+    margin-left: 229.5px;
+    margin-top: 229.5px;
+}
+
+#green {
+    height: 153px;
+    width: 153px;
+    background-color: green;
+    border: 1px solid black;
+    position: absolute;
+ 
+}
+#yellow {
+    height: 153px;
+    width: 153px;
+    background-color: yellow;
+    border: 1px solid black;
+    position: absolute;
+    margin-left: 229.5px;
+}
+
+#blue {
+    height: 153px;
+    width: 153px;
+    background-color: blue;
+    border: 1px solid black;
+    position: absolute;
+    margin-top: 229.5px;
+}
+
+#victory {
+    height: 76.5px;
+    width: 76.5px;
+    /* background-image: url('./image/victory.jpeg');
+    background-size: cover;
+    background-position: center; */
+    background: 
+    linear-gradient(45deg, green 50%,red 50%);
+    border: 1px solid black;
+    position: absolute;
+    margin-left: 153px;
+    margin-top: 153px;
+    text-align: center;
+
+    
+}
+h1{
+    margin-top: 26px;
+    font-size: 20px;
+}
+
+#reds {
+    height: 76.5px;
+    width: 153px;
+    background-color: rgb(218, 87, 54);
+    border: 1px solid black;
+    position: absolute;
+    margin-left: 229px;
+    margin-top: 153px;
+}
+
+#greens {
+    height: 76.5px;
+    width: 153px;
+    background-color: rgb(147, 237, 122);
+    border: 1px solid black;
+    position: absolute;
+    /* adjust the margins to avoid overlapping */
+    margin-left:0px;
+    margin-top: 153px;
+    z-index: 3;
+}
+
+#yellows {
+    height: 153px;
+    width: 76.5px;
+    background-color: rgb(196, 207, 80);
+    border: 1px solid black;
+    position: absolute;
+    /* adjust the margins to avoid overlapping */
+    margin-left: 153px;
+    margin-top: 0px;
+}
+
+#blues {
+    height: 153px;
+    width: 76.5px;
+    background-color: rgb(124, 112, 221);
+    border: 1px solid black;
+    position: absolute;
+    /* adjust the margins to avoid overlapping */
+    margin-left: 153px;
+    margin-top: 229px;
+}
+h4{
+    background-color: rgb(202, 220, 220);
+}
+.dices:hover{
+    cursor: pointer;
+}
+.dices{
+    font-size: 32px;
+    border-radius: 5px;
+}
+#abcd-fake{
+    background:transparent;
+    opacity: 0.2;
+    z-index: -1;
+}
