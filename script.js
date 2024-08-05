@@ -620,11 +620,13 @@ redbutton.forEach((val) => {
       for (let i = rp1; i < upperLimit; i++) {
         const ppp = document.querySelector(`#${redpath[i]}`);
         ppp.appendChild(br1); // Assuming br1 is a DOM element
-        yellowdice.disabled = true;
-        bluedice.disabled = false;
-        reddice.disabled = true;
-        greendice.disabled = true;
+        // yellowdice.disabled = true;
+        // bluedice.disabled = false;
+        // reddice.disabled = true;
+        // greendice.disabled = true;
       }
+      //for masti
+      rp1=upperLimit;
       //for cut pieces
       if (rp1+39 == bp1||rp1==bp1+13) {
         b1.appendChild(bb1);
@@ -667,15 +669,16 @@ redbutton.forEach((val) => {
       dis(); // Call dis() function defined elsewhere
       rp1 = upperLimit;
     } else if (val === br2) {
-      let upperLimit1 = rp2+rb;
-      for (let i = rp2; i < upperLimit1; i++) {
+      let rupperLimit1 = rp2+rb;
+      for (let i = rp2; i < rupperLimit1; i++) {
         const ppp = document.querySelector(`#${redpath[i]}`);
         ppp.appendChild(br2); // Assuming br2 is a DOM element
-        yellowdice.disabled = true;
-        bluedice.disabled = false;
-        reddice.disabled = true;
-        greendice.disabled = true;
+        // yellowdice.disabled = true;
+        // bluedice.disabled = false;
+        // reddice.disabled = true;
+        // greendice.disabled = true;
       }
+      rp2=rupperLimit1;
       //goti
       if (rp2+39 == bp1||rp2==bp1+13) {
         b1.appendChild(bb1);
@@ -719,15 +722,16 @@ redbutton.forEach((val) => {
       rp2 += rb;
     } else if (val === br3) {
       
-      let upperLimit1 = rp3+rb;
-      for (let i = rp3; i < upperLimit1; i++) {
+      let upperLimit2 = rp3+rb;
+      for (let i = rp3; i < upperLimit2; i++) {
         const ppp = document.querySelector(`#${redpath[i]}`);
         ppp.appendChild(br3); // Assuming br3 is a DOM element
-        yellowdice.disabled = true;
-        bluedice.disabled = false;
-        reddice.disabled = true;
-        greendice.disabled = true;
+        // yellowdice.disabled = true;
+        // bluedice.disabled = false;
+        // reddice.disabled = true;
+        // greendice.disabled = true;
       }
+      rp3=upperLimit2;
       //goti
 if (rp3+39 == bp1||rp3==bp1+13) {
   b1.appendChild(bb1);
@@ -770,15 +774,16 @@ if (rp3+39 == bp1||rp3==bp1+13) {
       dis(); // Call dis() function defined elsewhere
       rp3 += rb;
     } else {
-      let upperLimit3 = rp4+rb;
-      for (let i = rp4; i < upperLimit3; i++) {
+      let rupperLimit3 = rp4+rb;
+      for (let i = rp4; i < rupperLimit3; i++) {
         const ppp = document.querySelector(`#${redpath[i]}`);
         ppp.appendChild(br4); // Assuming br2 is a DOM element
-        yellowdice.disabled = true;
-        bluedice.disabled = false;
-        reddice.disabled = true;
-        greendice.disabled = true;
+        // yellowdice.disabled = true;
+        // bluedice.disabled = false;
+        // reddice.disabled = true;
+        // greendice.disabled = true;
       }
+      rp4=rupperLimit3;
       //goti
 if (rp4+39 == bp1||rp4==bp1+13) {
   b1.appendChild(bb1);
