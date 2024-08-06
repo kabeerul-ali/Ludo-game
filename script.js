@@ -620,10 +620,10 @@ redbutton.forEach((val) => {
       for (let i = rp1; i < upperLimit; i++) {
         const ppp = document.querySelector(`#${redpath[i]}`);
         ppp.appendChild(br1); // Assuming br1 is a DOM element
-        // yellowdice.disabled = true;
-        // bluedice.disabled = false;
-        // reddice.disabled = true;
-        // greendice.disabled = true;
+        yellowdice.disabled = true;
+        bluedice.disabled = false;
+        reddice.disabled = true;
+        greendice.disabled = true;
       }
       //for masti
       rp1=upperLimit;
@@ -669,16 +669,16 @@ redbutton.forEach((val) => {
       dis(); // Call dis() function defined elsewhere
       rp1 = upperLimit;
     } else if (val === br2) {
-      let rupperLimit1 = rp2+rb;
-      for (let i = rp2; i < rupperLimit1; i++) {
+      let upperLImit = rp2+rb;
+      for (let i = rp2; i < upperLImit; i++) {
         const ppp = document.querySelector(`#${redpath[i]}`);
         ppp.appendChild(br2); // Assuming br2 is a DOM element
-        // yellowdice.disabled = true;
-        // bluedice.disabled = false;
-        // reddice.disabled = true;
-        // greendice.disabled = true;
+        yellowdice.disabled = true;
+        bluedice.disabled = false;
+        reddice.disabled = true;
+        greendice.disabled = true;
       }
-      rp2=rupperLimit1;
+      rp2=upperLImit;
       //goti
       if (rp2+39 == bp1||rp2==bp1+13) {
         b1.appendChild(bb1);
@@ -719,19 +719,19 @@ redbutton.forEach((val) => {
       }
       //goti
       dis(); // Call dis() function defined elsewhere
-      rp2 += rb;
+      rp2 = upperLimit;
     } else if (val === br3) {
       
-      let upperLimit2 = rp3+rb;
-      for (let i = rp3; i < upperLimit2; i++) {
+      let upperLImit = rp3+rb;
+      for (let i = rp3; i < upperLImit; i++) {
         const ppp = document.querySelector(`#${redpath[i]}`);
         ppp.appendChild(br3); // Assuming br3 is a DOM element
-        // yellowdice.disabled = true;
-        // bluedice.disabled = false;
-        // reddice.disabled = true;
-        // greendice.disabled = true;
+        yellowdice.disabled = true;
+        bluedice.disabled = false;
+        reddice.disabled = true;
+        greendice.disabled = true;
       }
-      rp3=upperLimit2;
+      rp3=upperLImit;
       //goti
 if (rp3+39 == bp1||rp3==bp1+13) {
   b1.appendChild(bb1);
@@ -772,18 +772,18 @@ if (rp3+39 == bp1||rp3==bp1+13) {
 }
 //goti
       dis(); // Call dis() function defined elsewhere
-      rp3 += rb;
+      rp3 = upperLimit;
     } else {
-      let rupperLimit3 = rp4+rb;
-      for (let i = rp4; i < rupperLimit3; i++) {
+      let upperLImit = rp4+rb;
+      for (let i = rp4; i < upperLImit; i++) {
         const ppp = document.querySelector(`#${redpath[i]}`);
         ppp.appendChild(br4); // Assuming br2 is a DOM element
-        // yellowdice.disabled = true;
-        // bluedice.disabled = false;
-        // reddice.disabled = true;
-        // greendice.disabled = true;
+        yellowdice.disabled = true;
+        bluedice.disabled = false;
+        reddice.disabled = true;
+        greendice.disabled = true;
       }
-      rp4=rupperLimit3;
+      rp4=upperLImit;
       //goti
 if (rp4+39 == bp1||rp4==bp1+13) {
   b1.appendChild(bb1);
@@ -824,7 +824,7 @@ if (rp4+39 == bp1||rp4==bp1+13) {
 }
 //goti
       dis(); // Call dis() function defined elsewhere
-      rp4 += rb;      
+      rp4 = upperLimit;    
     }
   });
 });
@@ -881,8 +881,8 @@ bluebutton.forEach((val) => {
       bp1 = upperLimit;
       console.log(bbb);
     } else if (val === bb2) {
-      let upperLimit1 = bp2+bbb;
-      for (let i = bp2; i < upperLimit1; i++) {
+      let upperLImit = bp2+bbb;
+      for (let i = bp2; i < upperLImit; i++) {
         const ppp = document.querySelector(`#${bluepath[i]}`);
         ppp.appendChild(bb2); // Assuming bb2 is a DOM element
         yellowdice.disabled = true;
@@ -894,8 +894,8 @@ bluebutton.forEach((val) => {
       bp2 += bbb;
     } else if (val === bb3) {
       
-      let upperLimit1 = bp3+bbb;
-      for (let i = bp3; i < upperLimit1; i++) {
+      let upperLImit = bp3+bbb;
+      for (let i = bp3; i < upperLImit; i++) {
         const ppp = document.querySelector(`#${bluepath[i]}`);
         ppp.appendChild(bb3); // Assuming bb3 is a DOM element
         yellowdice.disabled = true;
@@ -906,8 +906,8 @@ bluebutton.forEach((val) => {
       dis(); // Call dis() function defined elsewhere
       bp3 += bbb;
     } else {
-      let upperLimit3 = bp4+bbb;
-      for (let i = bp4; i < upperLimit3; i++) {
+      let upperLImit = bp4+bbb;
+      for (let i = bp4; i < upperLImit; i++) {
         const ppp = document.querySelector(`#${bluepath[i]}`);
         ppp.appendChild(bb4); // Assuming bb2 is a DOM element
         yellowdice.disabled = true;
@@ -975,8 +975,8 @@ greenbutton.forEach((val) => {
       gp1 = upperLimit;
       console.log(gb);
     } else if (val === bg2) {
-      let upperLimit1 = gp2+gb;
-      for (let i = gp2; i < upperLimit1; i++) {
+      let upperLImit = gp2+gb;
+      for (let i = gp2; i < upperLImit; i++) {
         const ppp = document.querySelector(`#${greenpath[i]}`);
         ppp.appendChild(bg2); // Assuming bg2 is a DOM element
         yellowdice.disabled = false;
@@ -988,8 +988,8 @@ greenbutton.forEach((val) => {
       gp2 += gb;
     } else if (val === bg3) {
       
-      let upperLimit1 = gp3+gb;
-      for (let i = gp3; i < upperLimit1; i++) {
+      let upperLImit = gp3+gb;
+      for (let i = gp3; i < upperLImit; i++) {
         const ppp = document.querySelector(`#${greenpath[i]}`);
         ppp.appendChild(bg3); // Assuming bg2 is a DOM element
         yellowdice.disabled = false;
@@ -1000,8 +1000,8 @@ greenbutton.forEach((val) => {
       dis(); // Call dis() function defined elsewhere
       gp3 += gb;
     } else {
-      let upperLimit3 = gp4+gb;
-      for (let i = gp4; i < upperLimit3; i++) {
+      let upperLImit = gp4+gb;
+      for (let i = gp4; i < upperLImit; i++) {
         const ppp = document.querySelector(`#${greenpath[i]}`);
         ppp.appendChild(bg4); // Assuming bg2 is a DOM element
         yellowdice.disabled = false;
@@ -1063,8 +1063,8 @@ yellowbutton.forEach((val) => {
         yp1 = upperLimit;
         console.log(yb);
       } else if (val === by2) {
-        let upperLimit1 = yp2+yb;
-        for (let i = yp2; i < upperLimit1; i++) {
+        let upperLImit = yp2+yb;
+        for (let i = yp2; i < upperLImit; i++) {
           const ppp = document.querySelector(`#${yellowpath[i]}`);
           ppp.appendChild(by2); // Assuming by2 is a DOM element
           yellowdice.disabled = true;
@@ -1076,8 +1076,8 @@ yellowbutton.forEach((val) => {
         yp2 += yb;
       } else if (val === by3) {
         
-        let upperLimit1 = yp3+yb;
-        for (let i = yp3; i < upperLimit1; i++) {
+        let upperLImit = yp3+yb;
+        for (let i = yp3; i < upperLImit; i++) {
           const ppp = document.querySelector(`#${yellowpath[i]}`);
           ppp.appendChild(by3); // Assuming by3 is a DOM element
           yellowdice.disabled = true;
@@ -1088,8 +1088,8 @@ yellowbutton.forEach((val) => {
         dis(); // Call dis() function defined elsewhere
         yp3 += yb;
       } else {
-        let upperLimit3 = yp4+yb;
-        for (let i = yp4; i < upperLimit3; i++) {
+        let upperLImit = yp4+yb;
+        for (let i = yp4; i < upperLImit; i++) {
           const ppp = document.querySelector(`#${yellowpath[i]}`);
           ppp.appendChild(by4); // Assuming by2 is a DOM element
           yellowdice.disabled = true;
