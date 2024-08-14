@@ -1,0 +1,6 @@
+{
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "explicit",
+    "editor.find.autoFindInSelection": "always",
+    "editor.fontSize": 14
+}

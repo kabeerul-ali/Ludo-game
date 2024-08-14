@@ -1143,95 +1143,45 @@ bluebutton.forEach((val) => {
       }
       bp1 = upperlimit;
       //goti
-      // //for cut pieces
-      // if (bp1 + 39 == gp1 || bp1 == gp1 + 13) {
-      //   g1.appendChild(bg1);
-      //   gp1 = 1;
-      // } else if (bp1 + 39 == gp2 || bp1 == gp2 + 13) {
-      //   g2.appendChild(bg2);
-      //   gp2 = 1;
-      // } else if (bp1 + 39 == gp3 || bp1 == gp3 + 13) {
-      //   g3.appendChild(bg3);
-      //   gp3 = 1;
-      // } else if (bp1 + 39 == gp4 || bp1 == gp4 + 13) {
-      //   g4.appendChild(bg4);
-      //   gp4 = 1;
-      // } else if (bp1 + 26 == yp1 || bp1 == yp1 + 26) {
-      //   y1.appendChild(by1);
-      //   yp1 = 1;
-      // } else if (bp1 + 26 == yp2 || bp1 == yp2 + 26) {
-      //   y2.appendChild(by2);
-      //   yp2 = 1;
-      // } else if (bp1 + 26 == yp3 || bp1 == yp3 + 26) {
-      //   y3.appendChild(by3);
-      //   yp3 = 1;
-      // } else if (bp1 + 26 == yp4 || bp1 == yp4 + 26) {
-      //   y4.appendChild(by4);
-      //   yp4 = 1;
-      // } else if (bp1 + 13 == rp1 || bp1 == rp1 + 39) {
-      //   r1.appendChild(br1);
-      //   rp1 = 1;
-      // } else if (bp1 + 13 == rp2 || bp1 == rp2 + 39) {
-      //   r2.appendChild(br2);
-      //   rp2 = 1;
-      // } else if (bp1 + 13 == yp3 || bp1 == rp3 + 39) {
-      //   r3.appendChild(br3);
-      //   rp3 = 1;
-      // } else if (bp1 + 13 == rp4 || bp1 == rp4 + 39) {
-      //   r4.appendChild(br4);
-      //   rp4 = 1;
-      // }
-
-      //short opr
-      //short operation
-      let bpid = [
-        br1.parentNode.id,
-        br2.parentNode.id,
-        br3.parentNode.id,
-        br4.parentNode.id,
-        bg1.parentNode.id,
-        bg2.parentNode.id,
-        bg3.parentNode.id,
-        bg4.parentNode.id,
-        by1.parentNode.id,
-        by2.parentNode.id,
-        by3.parentNode.id,
-        by4.parentNode.id,
-      ];
-      let bpath = {
-        rp1: rp1,
-        rp2: rp2,
-        rp3: rp3,
-        rp4: rp4,
-        gp1: gp1,
-        gp2: gp1,
-        gp3: gp3,
-        gp4: gp4,
-        yp1: yp1,
-        yp2: yp2,
-        yp3: yp3,
-        yp4: yp4,
-      };
-      let spath = [r1, r2, r3, r4, g1, g2, g3, g4, y1, y2, y3, y4];
-      let count = 0;
-      for (let i = 0; i < bpid.length; i++) {
-        if (bpid[i] == bb1.parentNode.id) {
-          let x = bb1.parentElement;
-          let y = x.children[0];
-          spath[i].appendChild(y);
-          //for do  path value 1
-          for (var key in bpath) {
-            if (count == i) {
-              bpath[key] = 1;
-              eval(`${key} = 1`);
-            }
-            count++;
-          }
-        }
+      //for cut pieces
+      if (bp1 + 39 == gp1 || bp1 == gp1 + 13) {
+        g1.appendChild(bg1);
+        gp1 = 1;
+      } else if (bp1 + 39 == gp2 || bp1 == gp2 + 13) {
+        g2.appendChild(bg2);
+        gp2 = 1;
+      } else if (bp1 + 39 == gp3 || bp1 == gp3 + 13) {
+        g3.appendChild(bg3);
+        gp3 = 1;
+      } else if (bp1 + 39 == gp4 || bp1 == gp4 + 13) {
+        g4.appendChild(bg4);
+        gp4 = 1;
+      } else if (bp1 + 26 == yp1 || bp1 == yp1 + 26) {
+        y1.appendChild(by1);
+        yp1 = 1;
+      } else if (bp1 + 26 == yp2 || bp1 == yp2 + 26) {
+        y2.appendChild(by2);
+        yp2 = 1;
+      } else if (bp1 + 26 == yp3 || bp1 == yp3 + 26) {
+        y3.appendChild(by3);
+        yp3 = 1;
+      } else if (bp1 + 26 == yp4 || bp1 == yp4 + 26) {
+        y4.appendChild(by4);
+        yp4 = 1;
+      } else if (bp1 + 13 == rp1 || bp1 == rp1 + 39) {
+        r1.appendChild(br1);
+        rp1 = 1;
+      } else if (bp1 + 13 == rp2 || bp1 == rp2 + 39) {
+        r2.appendChild(br2);
+        rp2 = 1;
+      } else if (bp1 + 13 == yp3 || bp1 == rp3 + 39) {
+        r3.appendChild(br3);
+        rp3 = 1;
+      } else if (bp1 + 13 == rp4 || bp1 == rp4 + 39) {
+        r4.appendChild(br4);
+        rp4 = 1;
       }
-      //opr close
 
-      //opr close
       //goti
       dis(); // Call dis() function defined elsewhere
       bp1 = upperlimit;
@@ -1248,94 +1198,43 @@ bluebutton.forEach((val) => {
       bp2 = upperlimit;
       //goti
       //for cut pieces
-      // if (bp2 + 39 == gp1 || bp2 == gp1 + 13) {
-      //   g1.appendChild(bg1);
-      //   gp1 = 1;
-      // } else if (bp2 + 39 == gp2 || bp2 == gp2 + 13) {
-      //   g2.appendChild(bg2);
-      //   gp2 = 1;
-      // } else if (bp2 + 39 == gp3 || bp2 == gp3 + 13) {
-      //   g3.appendChild(bg3);
-      //   gp3 = 1;
-      // } else if (bp2 + 39 == gp4 || bp2 == gp4 + 13) {
-      //   g4.appendChild(bg4);
-      //   gp4 = 1;
-      // } else if (bp2 + 26 == yp1 || bp2 == yp1 + 26) {
-      //   y1.appendChild(by1);
-      //   yp1 = 1;
-      // } else if (bp2 + 26 == yp2 || bp2 == yp2 + 26) {
-      //   y2.appendChild(by2);
-      //   yp2 = 1;
-      // } else if (bp2 + 26 == yp3 || bp2 == yp3 + 26) {
-      //   y3.appendChild(by3);
-      //   yp3 = 1;
-      // } else if (bp2 + 26 == yp4 || bp2 == yp4 + 26) {
-      //   y4.appendChild(by4);
-      //   yp4 = 1;
-      // } else if (bp2 + 13 == rp1 || bp2 == rp1 + 39) {
-      //   r1.appendChild(br1);
-      //   rp1 = 1;
-      // } else if (bp2 + 13 == rp2 || bp2 == rp2 + 39) {
-      //   r2.appendChild(br2);
-      //   rp2 = 1;
-      // } else if (bp2 + 13 == yp3 || bp2 == rp3 + 39) {
-      //   r3.appendChild(br3);
-      //   rp3 = 1;
-      // } else if (bp2 + 13 == rp4 || bp2 == rp4 + 39) {
-      //   r4.appendChild(br4);
-      //   rp4 = 1;
-      // }
-
-      //opr str
-      //short operation
-      let bpid = [
-        br1.parentNode.id,
-        br2.parentNode.id,
-        br3.parentNode.id,
-        br4.parentNode.id,
-        bg1.parentNode.id,
-        bg2.parentNode.id,
-        bg3.parentNode.id,
-        bg4.parentNode.id,
-        by1.parentNode.id,
-        by2.parentNode.id,
-        by3.parentNode.id,
-        by4.parentNode.id,
-      ];
-      let bpath1 = {
-        rp1: rp1,
-        rp2: rp2,
-        rp3: rp3,
-        rp4: rp4,
-        gp1: gp1,
-        gp2: gp1,
-        gp3: gp3,
-        gp4: gp4,
-        yp1: yp1,
-        yp2: yp2,
-        yp3: yp3,
-        yp4: yp4,
-      };
-      let spath = [r1, r2, r3, r4, g1, g2, g3, g4, y1, y2, y3, y4];
-      let count = 0;
-      for (let i = 0; i < bpid.length; i++) {
-        if (bpid[i] == bb2.parentNode.id) {
-          let x = bb2.parentElement;
-          let y = x.children[0];
-          spath[i].appendChild(y);
-          //for do  path value 1
-          for (var key in bpath1) {
-            if (count == i) {
-              bpath1[key] = 1;
-              eval(`${key} = 1`);
-            }
-            count++;
-          }
-        }
+      if (bp2 + 39 == gp1 || bp2 == gp1 + 13) {
+        g1.appendChild(bg1);
+        gp1 = 1;
+      } else if (bp2 + 39 == gp2 || bp2 == gp2 + 13) {
+        g2.appendChild(bg2);
+        gp2 = 1;
+      } else if (bp2 + 39 == gp3 || bp2 == gp3 + 13) {
+        g3.appendChild(bg3);
+        gp3 = 1;
+      } else if (bp2 + 39 == gp4 || bp2 == gp4 + 13) {
+        g4.appendChild(bg4);
+        gp4 = 1;
+      } else if (bp2 + 26 == yp1 || bp2 == yp1 + 26) {
+        y1.appendChild(by1);
+        yp1 = 1;
+      } else if (bp2 + 26 == yp2 || bp2 == yp2 + 26) {
+        y2.appendChild(by2);
+        yp2 = 1;
+      } else if (bp2 + 26 == yp3 || bp2 == yp3 + 26) {
+        y3.appendChild(by3);
+        yp3 = 1;
+      } else if (bp2 + 26 == yp4 || bp2 == yp4 + 26) {
+        y4.appendChild(by4);
+        yp4 = 1;
+      } else if (bp2 + 13 == rp1 || bp2 == rp1 + 39) {
+        r1.appendChild(br1);
+        rp1 = 1;
+      } else if (bp2 + 13 == rp2 || bp2 == rp2 + 39) {
+        r2.appendChild(br2);
+        rp2 = 1;
+      } else if (bp2 + 13 == yp3 || bp2 == rp3 + 39) {
+        r3.appendChild(br3);
+        rp3 = 1;
+      } else if (bp2 + 13 == rp4 || bp2 == rp4 + 39) {
+        r4.appendChild(br4);
+        rp4 = 1;
       }
-      //opr close
-
-      //opr close
 
       //goti
       dis(); // Call dis() function defined elsewhere
@@ -1353,94 +1252,43 @@ bluebutton.forEach((val) => {
       bp3 = upperlimit;
       //goti
       //for cut pieces
-      // if (bp3 + 39 == gp1 || bp3 == gp1 + 13) {
-      //   g1.appendChild(bg1);
-      //   gp1 = 1;
-      // } else if (bp3 + 39 == gp2 || bp3 == gp2 + 13) {
-      //   g2.appendChild(bg2);
-      //   gp2 = 1;
-      // } else if (bp3 + 39 == gp3 || bp3 == gp3 + 13) {
-      //   g3.appendChild(bg3);
-      //   gp3 = 1;
-      // } else if (bp3 + 39 == gp4 || bp3 == gp4 + 13) {
-      //   g4.appendChild(bg4);
-      //   gp4 = 1;
-      // } else if (bp3 + 26 == yp1 || bp3 == yp1 + 26) {
-      //   y1.appendChild(by1);
-      //   yp1 = 1;
-      // } else if (bp3 + 26 == yp2 || bp3 == yp2 + 26) {
-      //   y2.appendChild(by2);
-      //   yp2 = 1;
-      // } else if (bp3 + 26 == yp3 || bp3 == yp3 + 26) {
-      //   y3.appendChild(by3);
-      //   yp3 = 1;
-      // } else if (bp3 + 26 == yp4 || bp3 == yp4 + 26) {
-      //   y4.appendChild(by4);
-      //   yp4 = 1;
-      // } else if (bp3 + 13 == rp1 || bp3 == rp1 + 39) {
-      //   r1.appendChild(br1);
-      //   rp1 = 1;
-      // } else if (bp3 + 13 == rp2 || bp3 == rp2 + 39) {
-      //   r2.appendChild(br2);
-      //   rp2 = 1;
-      // } else if (bp3 + 13 == yp3 || bp3 == rp3 + 39) {
-      //   r3.appendChild(br3);
-      //   rp3 = 1;
-      // } else if (bp3 + 13 == rp4 || bp3 == rp4 + 39) {
-      //   r4.appendChild(br4);
-      //   rp4 = 1;
-      // }
-
-      //opr str
-      //short operation
-      let bpid = [
-        br1.parentNode.id,
-        br2.parentNode.id,
-        br3.parentNode.id,
-        br4.parentNode.id,
-        bg1.parentNode.id,
-        bg2.parentNode.id,
-        bg3.parentNode.id,
-        bg4.parentNode.id,
-        by1.parentNode.id,
-        by2.parentNode.id,
-        by3.parentNode.id,
-        by4.parentNode.id,
-      ];
-      let bpath2 = {
-        rp1: rp1,
-        rp2: rp2,
-        rp3: rp3,
-        rp4: rp4,
-        gp1: gp1,
-        gp2: gp1,
-        gp3: gp3,
-        gp4: gp4,
-        yp1: yp1,
-        yp2: yp2,
-        yp3: yp3,
-        yp4: yp4,
-      };
-      let spath = [r1, r2, r3, r4, g1, g2, g3, g4, y1, y2, y3, y4];
-      let count = 0;
-      for (let i = 0; i < bpid.length; i++) {
-        if (bpid[i] == bb3.parentNode.id) {
-          let x = bb3.parentElement;
-          let y = x.children[0];
-          spath[i].appendChild(y);
-          //for do  path value 1
-          for (var key in bpath2) {
-            if (count == i) {
-              bpath2[key] = 1;
-              eval(`${key} = 1`);
-            }
-            count++;
-          }
-        }
+      if (bp3 + 39 == gp1 || bp3 == gp1 + 13) {
+        g1.appendChild(bg1);
+        gp1 = 1;
+      } else if (bp3 + 39 == gp2 || bp3 == gp2 + 13) {
+        g2.appendChild(bg2);
+        gp2 = 1;
+      } else if (bp3 + 39 == gp3 || bp3 == gp3 + 13) {
+        g3.appendChild(bg3);
+        gp3 = 1;
+      } else if (bp3 + 39 == gp4 || bp3 == gp4 + 13) {
+        g4.appendChild(bg4);
+        gp4 = 1;
+      } else if (bp3 + 26 == yp1 || bp3 == yp1 + 26) {
+        y1.appendChild(by1);
+        yp1 = 1;
+      } else if (bp3 + 26 == yp2 || bp3 == yp2 + 26) {
+        y2.appendChild(by2);
+        yp2 = 1;
+      } else if (bp3 + 26 == yp3 || bp3 == yp3 + 26) {
+        y3.appendChild(by3);
+        yp3 = 1;
+      } else if (bp3 + 26 == yp4 || bp3 == yp4 + 26) {
+        y4.appendChild(by4);
+        yp4 = 1;
+      } else if (bp3 + 13 == rp1 || bp3 == rp1 + 39) {
+        r1.appendChild(br1);
+        rp1 = 1;
+      } else if (bp3 + 13 == rp2 || bp3 == rp2 + 39) {
+        r2.appendChild(br2);
+        rp2 = 1;
+      } else if (bp3 + 13 == yp3 || bp3 == rp3 + 39) {
+        r3.appendChild(br3);
+        rp3 = 1;
+      } else if (bp3 + 13 == rp4 || bp3 == rp4 + 39) {
+        r4.appendChild(br4);
+        rp4 = 1;
       }
-      //opr close
-
-      //opr clode
 
       //goti
       dis(); // Call dis() function defined elsewhere
@@ -1458,92 +1306,43 @@ bluebutton.forEach((val) => {
       bp4 = upperlimit;
       //goti
       //for cut pieces
-      // if (bp4 + 39 == gp1 || bp4 == gp1 + 13) {
-      //   g1.appendChild(bg1);
-      //   gp1 = 1;
-      // } else if (bp4 + 39 == gp2 || bp4 == gp2 + 13) {
-      //   g2.appendChild(bg2);
-      //   gp2 = 1;
-      // } else if (bp4 + 39 == gp3 || bp4 == gp3 + 13) {
-      //   g3.appendChild(bg3);
-      //   gp3 = 1;
-      // } else if (bp4 + 39 == gp4 || bp4 == gp4 + 13) {
-      //   g4.appendChild(bg4);
-      //   gp4 = 1;
-      // } else if (bp4 + 26 == yp1 || bp4 == yp1 + 26) {
-      //   y1.appendChild(by1);
-      //   yp1 = 1;
-      // } else if (bp4 + 26 == yp2 || bp4 == yp2 + 26) {
-      //   y2.appendChild(by2);
-      //   yp2 = 1;
-      // } else if (bp4 + 26 == yp3 || bp4 == yp3 + 26) {
-      //   y3.appendChild(by3);
-      //   yp3 = 1;
-      // } else if (bp4 + 26 == yp4 || bp4 == yp4 + 26) {
-      //   y4.appendChild(by4);
-      //   yp4 = 1;
-      // } else if (bp4 + 13 == rp1 || bp4 == rp1 + 39) {
-      //   r1.appendChild(br1);
-      //   rp1 = 1;
-      // } else if (bp4 + 13 == rp2 || bp4 == rp2 + 39) {
-      //   r2.appendChild(br2);
-      //   rp2 = 1;
-      // } else if (bp4 + 13 == yp3 || bp4 == rp3 + 39) {
-      //   r3.appendChild(br3);
-      //   rp3 = 1;
-      // } else if (bp4 + 13 == rp4 || bp4 == rp4 + 39) {
-      //   r4.appendChild(br4);
-      //   rp4 = 1;
-      // }
-
-      //opr start
-      //short operation
-      let bpid = [
-        br1.parentNode.id,
-        br2.parentNode.id,
-        br3.parentNode.id,
-        br4.parentNode.id,
-        bg1.parentNode.id,
-        bg2.parentNode.id,
-        bg3.parentNode.id,
-        bg4.parentNode.id,
-        by1.parentNode.id,
-        by2.parentNode.id,
-        by3.parentNode.id,
-        by4.parentNode.id,
-      ];
-      let bpath3 = {
-        rp1: rp1,
-        rp2: rp2,
-        rp3: rp3,
-        rp4: rp4,
-        gp1: gp1,
-        gp2: gp1,
-        gp3: gp3,
-        gp4: gp4,
-        yp1: yp1,
-        yp2: yp2,
-        yp3: yp3,
-        yp4: yp4,
-      };
-      let spath = [r1, r2, r3, r4, g1, g2, g3, g4, y1, y2, y3, y4];
-      let count = 0;
-      for (let i = 0; i < bpid.length; i++) {
-        if (bpid[i] == bb4.parentNode.id) {
-          let x = bb4.parentElement;
-          let y = x.children[0];
-          spath[i].appendChild(y);
-          //for do  path value 1
-          for (var key in bpath3) {
-            if (count == i) {
-              bpath3[key] = 1;
-              eval(`${key} = 1`);
-            }
-            count++;
-          }
-        }
+      if (bp4 + 39 == gp1 || bp4 == gp1 + 13) {
+        g1.appendChild(bg1);
+        gp1 = 1;
+      } else if (bp4 + 39 == gp2 || bp4 == gp2 + 13) {
+        g2.appendChild(bg2);
+        gp2 = 1;
+      } else if (bp4 + 39 == gp3 || bp4 == gp3 + 13) {
+        g3.appendChild(bg3);
+        gp3 = 1;
+      } else if (bp4 + 39 == gp4 || bp4 == gp4 + 13) {
+        g4.appendChild(bg4);
+        gp4 = 1;
+      } else if (bp4 + 26 == yp1 || bp4 == yp1 + 26) {
+        y1.appendChild(by1);
+        yp1 = 1;
+      } else if (bp4 + 26 == yp2 || bp4 == yp2 + 26) {
+        y2.appendChild(by2);
+        yp2 = 1;
+      } else if (bp4 + 26 == yp3 || bp4 == yp3 + 26) {
+        y3.appendChild(by3);
+        yp3 = 1;
+      } else if (bp4 + 26 == yp4 || bp4 == yp4 + 26) {
+        y4.appendChild(by4);
+        yp4 = 1;
+      } else if (bp4 + 13 == rp1 || bp4 == rp1 + 39) {
+        r1.appendChild(br1);
+        rp1 = 1;
+      } else if (bp4 + 13 == rp2 || bp4 == rp2 + 39) {
+        r2.appendChild(br2);
+        rp2 = 1;
+      } else if (bp4 + 13 == yp3 || bp4 == rp3 + 39) {
+        r3.appendChild(br3);
+        rp3 = 1;
+      } else if (bp4 + 13 == rp4 || bp4 == rp4 + 39) {
+        r4.appendChild(br4);
+        rp4 = 1;
       }
-      //opr close
 
       //goti
       dis(); // Call dis() function defined elsewhere
