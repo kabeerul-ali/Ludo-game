@@ -238,7 +238,6 @@ y4.style.marginTop = "67px";
 y4.style.border = "1px";
 y4.style.borderRadius = "10px";
 y0.appendChild(y4);
-
 //decorate blue
 //create white div inside blue div
 //and also create 4 blue div inside white dive which commant as 1,2,3,4;
@@ -596,10 +595,11 @@ reddice.style.width = "50px";
 reddice.style.backgroundColor = "red";
 reddice.style.border = "3px solid black";
 reddice.style.borderRadius = "3px";
-var whole = document.querySelector("body");
+var whole = document.querySelector("#grid-container");
 whole.append(reddice);
-reddice.style.marginLeft = "760px";
-reddice.style.marginTop = "7px";
+reddice.style.position="absolute";
+reddice.style.marginLeft = "332px";
+reddice.style.marginTop = "389px";
 var rb;
 var intervalId1;
 reddice.addEventListener("click", ()=>{
@@ -616,61 +616,85 @@ reddice.addEventListener("click", ()=>{
 redbutton.forEach((val) => {
   val.addEventListener('click', () => {
     if (val === br1) {
-      let upperLimit = rp1 + rb;
-      for (let i = rp1; i < upperLimit; i++) {
+      let upperlimit = rp1 + rb;
+      for (let i = rp1; i < upperlimit; i++) {
         const ppp = document.querySelector(`#${redpath[i]}`);
         ppp.appendChild(br1); // Assuming br1 is a DOM element
-        yellowdice.disabled = true;
-        bluedice.disabled = false;
-        reddice.disabled = true;
-        greendice.disabled = true;
+        // yellowdice.disabled = true;
+        // bluedice.disabled = false;
+        // reddice.disabled = true;
+        // greendice.disabled = true;
       }
       //for masti
-      rp1=upperLimit;
+      rp1=upperlimit;
       //for cut pieces
-      if (rp1+39 == bp1||rp1==bp1+13) {
-        b1.appendChild(bb1);
-        bp1=1;
-      } else if (rp1+39 == bp2||rp1==bp2+13) {
-        b2.appendChild(bb2);
-        bp2=1;
-      } else if (rp1+39 == bp3||rp1==bp3+13) {
-        b3.appendChild(bb3);
-        bp3=1;
-      } else if (rp1+39 == bp4||rp1==bp4+13) {
-        b4.appendChild(bb4);
-        bp4=1;
-      } else if (rp1+26 == gp1||rp1==gp1+26) {
-        g1.appendChild(bg1);  
-        gp1=1;
-      } else if (rp1+26 == gp2||rp1==gp2+26) {
-        g2.appendChild(bg2);
-        gp2=1;
-      } else if (rp1+26 == gp3||rp1==gp3+26) {
-        g3.appendChild(bg3);
-        gp3=1;
-      } else if (rp1 +26== gp4||rp1==gp4+26) {
-        g4.appendChild(bg4);
-        gp4=1;
-      } else if (rp1+13 == yp1||rp1==yp1+39) {
-        y1.appendChild(by1);
-        yp1=1;
-      } else if (rp1+13 == yp2||rp1==yp2+39) {
-        y2.appendChild(by2);
-        yp2=1;
-      } else if (rp1+13 == yp3||rp1==yp3+39) {
-        y3.appendChild(by3);
-        yp3=1;
-      } else if (rp1+13 == yp4||rp1==yp4+39) {
-        y4.appendChild(by4);
-        yp4=1;
+      //goti
+// if (rp1+39 == bp1||rp1==bp1+13) {
+//   b1.appendChild(bb1);
+//   bp1=1;
+// } else if (rp1+39 == bp2||rp1==bp2+13) {
+//   b2.appendChild(bb2);
+//   bp2=1;
+// } else if (rp1+39 == bp3||rp1==bp3+13) {
+//   b3.appendChild(bb3);
+//   bp3=1;
+// } else if (rp1+39 == bp4||rp1==bp4+13) {
+//   b4.appendChild(bb4);
+//   bp4=1;
+// } else if (rp1+26 == gp1||rp1==gp1+26) {
+//   g1.appendChild(bg1);  
+//   gp1=1;
+// } else if (rp1+26 == gp2||rp1==gp2+26) {
+//   g2.appendChild(bg2);
+//   gp2=1;
+// } else if (rp1+26 == gp3||rp1==gp3+26) {
+//   g3.appendChild(bg3);
+//   gp3=1;
+// } else if (rp1 +26== gp4||rp1==gp4+26) {
+//   g4.appendChild(bg4);
+//   gp4=1;
+// } else if (rp1+13 == yp1||rp1==yp1+39) {
+//   y1.appendChild(by1);
+//   yp1=1;
+// } else if (rp1+13 == yp2||rp1==yp2+39) {
+//   y2.appendChild(by2);
+//   yp2=1;
+// } else if (rp1+13 == yp3||rp1==yp3+39) {
+//   y3.appendChild(by3);
+//   yp3=1;
+// } else if (rp1+13 == yp4||rp1==yp4+39) {
+//   y4.appendChild(by4);
+//   yp4=1;
+// }
+//goti
+      //short operation
+      var rpid = [bb1.parentNode.id, bb2.parentNode.id, bb3.parentNode.id, bb4.parentNode.id, bg1.parentNode.id, bg2.parentNode.id, bg3.parentNode.id, bg4.parentNode.id, by1.parentNode.id, by2.parentNode.id, by3.parentNode.id, by4.parentNode.id];
+//var trpid = [bb1, bb2, bb3, bb4, bg1, bg2, bg3, bg4, by1, by2, by3, by4];
+var rpath = {bp1:bp1, bp2:bp2, bp3:bp3, bp4:bp4, gp1:gp1, gp2:gp1, gp3:gp3, gp4:gp4, yp1:yp1, yp2:yp2, yp3:yp3, yp4:yp4};
+var spath=[b1,b2,b3,b4,g1,g2,g3,g4,y1,y2,y3,y4];
+var count=0;
+for (let i = 0; i < rpid.length; i++) {
+  if (rpid[i] == br1.parentNode.id) {
+    let x=br1.parentElement;
+    let y=x.children[0];
+    spath[i].appendChild(y);
+    //for do  path value 1 
+    for (var key in rpath) {
+      if (count == i) {
+        rpath[key] = 1;
+        key=1; 
       }
+      count++;
+    }
+  }
+}
+      //opr close
       //goti    
       dis(); // Call dis() function defined elsewhere
-      rp1 = upperLimit;
-    } else if (val === br2) {
-      let upperLImit = rp2+rb;
-      for (let i = rp2; i < upperLImit; i++) {
+      rp1 = upperlimit;
+         } else if (val === br2) {
+      let upperlimit = rp2+rb;
+      for (let i = rp2; i < upperlimit; i++) {
         const ppp = document.querySelector(`#${redpath[i]}`);
         ppp.appendChild(br2); // Assuming br2 is a DOM element
         yellowdice.disabled = true;
@@ -678,7 +702,7 @@ redbutton.forEach((val) => {
         reddice.disabled = true;
         greendice.disabled = true;
       }
-      rp2=upperLImit;
+      rp2=upperlimit;
       //goti
       if (rp2+39 == bp1||rp2==bp1+13) {
         b1.appendChild(bb1);
@@ -719,11 +743,11 @@ redbutton.forEach((val) => {
       }
       //goti
       dis(); // Call dis() function defined elsewhere
-      rp2 = upperLimit;
+      rp2 = upperlimit;
     } else if (val === br3) {
       
-      let upperLImit = rp3+rb;
-      for (let i = rp3; i < upperLImit; i++) {
+      let upperlimit = rp3+rb;
+      for (let i = rp3; i < upperlimit; i++) {
         const ppp = document.querySelector(`#${redpath[i]}`);
         ppp.appendChild(br3); // Assuming br3 is a DOM element
         yellowdice.disabled = true;
@@ -731,7 +755,7 @@ redbutton.forEach((val) => {
         reddice.disabled = true;
         greendice.disabled = true;
       }
-      rp3=upperLImit;
+      rp3=upperlimit;
       //goti
 if (rp3+39 == bp1||rp3==bp1+13) {
   b1.appendChild(bb1);
@@ -772,10 +796,10 @@ if (rp3+39 == bp1||rp3==bp1+13) {
 }
 //goti
       dis(); // Call dis() function defined elsewhere
-      rp3 = upperLimit;
+      rp3 = upperlimit;
     } else {
-      let upperLImit = rp4+rb;
-      for (let i = rp4; i < upperLImit; i++) {
+      let upperlimit = rp4+rb;
+      for (let i = rp4; i < upperlimit; i++) {
         const ppp = document.querySelector(`#${redpath[i]}`);
         ppp.appendChild(br4); // Assuming br2 is a DOM element
         yellowdice.disabled = true;
@@ -783,7 +807,7 @@ if (rp3+39 == bp1||rp3==bp1+13) {
         reddice.disabled = true;
         greendice.disabled = true;
       }
-      rp4=upperLImit;
+      rp4=upperlimit;
       //goti
 if (rp4+39 == bp1||rp4==bp1+13) {
   b1.appendChild(bb1);
@@ -824,7 +848,7 @@ if (rp4+39 == bp1||rp4==bp1+13) {
 }
 //goti
       dis(); // Call dis() function defined elsewhere
-      rp4 = upperLimit;    
+      rp4 = upperlimit;    
     }
   });
 });
@@ -848,8 +872,8 @@ bluedice.style.border = "3px solid black";
 bluedice.style.borderRadius = "3px";
 whole.append(bluedice);
 bluedice.style.position = "absolute";
-bluedice.style.left = "457px"; // Changed from marginRight to right
-bluedice.style.top = "476px"; // Changed from marginTop to top
+bluedice.style.left = "0px"; // Changed from marginRight to right
+bluedice.style.top = "389px"; // Changed from marginTop to top
 //start
 var bbb;
 var intervalId2;
@@ -868,8 +892,8 @@ bluedice.addEventListener("click", ()=>{
 bluebutton.forEach((val) => {
   val.addEventListener('click', () => {
     if (val === bb1) {
-      let upperLimit = bp1 + bbb;
-      for (let i = bp1; i < upperLimit; i++) {
+      let upperlimit = bp1 + bbb;
+      for (let i = bp1; i < upperlimit; i++) {
         const ppp = document.querySelector(`#${bluepath[i]}`);
         ppp.appendChild(bb1); // Assuming bb1 is a DOM element
         yellowdice.disabled = true;
@@ -877,12 +901,53 @@ bluebutton.forEach((val) => {
         reddice.disabled = true;
         greendice.disabled = false;
       }
+      bp1=upperlimit;
+      //goti
+            //for cut pieces
+            if (bp1+39 == gp1||bp1==gp1+13) {
+              g1.appendChild(bg1);
+              gp1=1;
+            } else if (bp1+39 == gp2||bp1==gp2+13) {
+              g2.appendChild(bg2);
+              gp2=1;
+            } else if (bp1+39 == gp3||bp1==gp3+13) {
+              g3.appendChild(bg3);
+              gp3=1;
+            } else if (bp1+39 == gp4||bp1==gp4+13) {
+              g4.appendChild(bg4);
+              gp4=1;
+            } else if (bp1+26 == yp1||bp1==yp1+26) {
+              y1.appendChild(by1);  
+              yp1=1;
+            } else if (bp1+26 == yp2||bp1==yp2+26) {
+              y2.appendChild(by2);
+              yp2=1;
+            } else if (bp1+26 == yp3||bp1==yp3+26) {
+              y3.appendChild(by3);
+              yp3=1;
+            } else if (bp1 +26== yp4||bp1==yp4+26) {
+              y4.appendChild(by4);
+              yp4=1;
+            } else if (bp1+13 == rp1||bp1==rp1+39) {
+              r1.appendChild(br1);
+              rp1=1;
+            } else if (bp1+13 == rp2||bp1==rp2+39) {
+              r2.appendChild(br2);
+              rp2=1;
+            } else if (bp1+13 == yp3||bp1==rp3+39) {
+              r3.appendChild(br3);
+              rp3=1;
+            } else if (bp1+13 == rp4||bp1==rp4+39) {
+              r4.appendChild(br4);
+              rp4=1;
+            }   
+            
+      //goti
       dis(); // Call dis() function defined elsewhere
-      bp1 = upperLimit;
-      console.log(bbb);
+      bp1 = upperlimit;
     } else if (val === bb2) {
-      let upperLImit = bp2+bbb;
-      for (let i = bp2; i < upperLImit; i++) {
+      let upperlimit = bp2+bbb;
+      for (let i = bp2; i < upperlimit; i++) {
         const ppp = document.querySelector(`#${bluepath[i]}`);
         ppp.appendChild(bb2); // Assuming bb2 is a DOM element
         yellowdice.disabled = true;
@@ -890,12 +955,54 @@ bluebutton.forEach((val) => {
         reddice.disabled = true;
         greendice.disabled = false;
       }
+      bp2=upperlimit;
+      //goti
+            //for cut pieces
+            if (bp2+39 == gp1||bp2==gp1+13) {
+              g1.appendChild(bg1);
+              gp1=1;
+            } else if (bp2+39 == gp2||bp2==gp2+13) {
+              g2.appendChild(bg2);
+              gp2=1;
+            } else if (bp2+39 == gp3||bp2==gp3+13) {
+              g3.appendChild(bg3);
+              gp3=1;
+            } else if (bp2+39 == gp4||bp2==gp4+13) {
+              g4.appendChild(bg4);
+              gp4=1;
+            } else if (bp2+26 == yp1||bp2==yp1+26) {
+              y1.appendChild(by1);  
+              yp1=1;
+            } else if (bp2+26 == yp2||bp2==yp2+26) {
+              y2.appendChild(by2);
+              yp2=1;
+            } else if (bp2+26 == yp3||bp2==yp3+26) {
+              y3.appendChild(by3);
+              yp3=1;
+            } else if (bp2 +26== yp4||bp2==yp4+26) {
+              y4.appendChild(by4);
+              yp4=1;
+            } else if (bp2+13 == rp1||bp2==rp1+39) {
+              r1.appendChild(br1);
+              rp1=1;
+            } else if (bp2+13 == rp2||bp2==rp2+39) {
+              r2.appendChild(br2);
+              rp2=1;
+            } else if (bp2+13 == yp3||bp2==rp3+39) {
+              r3.appendChild(br3);
+              rp3=1;
+            } else if (bp2+13 == rp4||bp2==rp4+39) {
+              r4.appendChild(br4);
+              rp4=1;
+            }   
+            
+      //goti
       dis(); // Call dis() function defined elsewhere
-      bp2 += bbb;
+      bp2 =upperlimit;
     } else if (val === bb3) {
       
-      let upperLImit = bp3+bbb;
-      for (let i = bp3; i < upperLImit; i++) {
+      let upperlimit = bp3+bbb;
+      for (let i = bp3; i < upperlimit; i++) {
         const ppp = document.querySelector(`#${bluepath[i]}`);
         ppp.appendChild(bb3); // Assuming bb3 is a DOM element
         yellowdice.disabled = true;
@@ -903,11 +1010,53 @@ bluebutton.forEach((val) => {
         reddice.disabled = true;
         greendice.disabled = false;
       }
+      bp3=upperlimit;
+     //goti
+            //for cut pieces
+            if (bp3+39 == gp1||bp3==gp1+13) {
+              g1.appendChild(bg1);
+              gp1=1;
+            } else if (bp3+39 == gp2||bp3==gp2+13) {
+              g2.appendChild(bg2);
+              gp2=1;
+            } else if (bp3+39 == gp3||bp3==gp3+13) {
+              g3.appendChild(bg3);
+              gp3=1;
+            } else if (bp3+39 == gp4||bp3==gp4+13) {
+              g4.appendChild(bg4);
+              gp4=1;
+            } else if (bp3+26 == yp1||bp3==yp1+26) {
+              y1.appendChild(by1);  
+              yp1=1;
+            } else if (bp3+26 == yp2||bp3==yp2+26) {
+              y2.appendChild(by2);
+              yp2=1;
+            } else if (bp3+26 == yp3||bp3==yp3+26) {
+              y3.appendChild(by3);
+              yp3=1;
+            } else if (bp3 +26== yp4||bp3==yp4+26) {
+              y4.appendChild(by4);
+              yp4=1;
+            } else if (bp3+13 == rp1||bp3==rp1+39) {
+              r1.appendChild(br1);
+              rp1=1;
+            } else if (bp3+13 == rp2||bp3==rp2+39) {
+              r2.appendChild(br2);
+              rp2=1;
+            } else if (bp3+13 == yp3||bp3==rp3+39) {
+              r3.appendChild(br3);
+              rp3=1;
+            } else if (bp3+13 == rp4||bp3==rp4+39) {
+              r4.appendChild(br4);
+              rp4=1;
+            }   
+            
+      //goti
       dis(); // Call dis() function defined elsewhere
-      bp3 += bbb;
+      bp3=upperlimit;
     } else {
-      let upperLImit = bp4+bbb;
-      for (let i = bp4; i < upperLImit; i++) {
+      let upperlimit = bp4+bbb;
+      for (let i = bp4; i < upperlimit; i++) {
         const ppp = document.querySelector(`#${bluepath[i]}`);
         ppp.appendChild(bb4); // Assuming bb2 is a DOM element
         yellowdice.disabled = true;
@@ -915,8 +1064,50 @@ bluebutton.forEach((val) => {
         reddice.disabled = true;
         greendice.disabled = false;
       }
+      bp4=upperlimit;
+      //goti
+            //for cut pieces
+            if (bp4+39 == gp1||bp4==gp1+13) {
+              g1.appendChild(bg1);
+              gp1=1;
+            } else if (bp4+39 == gp2||bp4==gp2+13) {
+              g2.appendChild(bg2);
+              gp2=1;
+            } else if (bp4+39 == gp3||bp4==gp3+13) {
+              g3.appendChild(bg3);
+              gp3=1;
+            } else if (bp4+39 == gp4||bp4==gp4+13) {
+              g4.appendChild(bg4);
+              gp4=1;
+            } else if (bp4+26 == yp1||bp4==yp1+26) {
+              y1.appendChild(by1);  
+              yp1=1;
+            } else if (bp4+26 == yp2||bp4==yp2+26) {
+              y2.appendChild(by2);
+              yp2=1;
+            } else if (bp4+26 == yp3||bp4==yp3+26) {
+              y3.appendChild(by3);
+              yp3=1;
+            } else if (bp4 +26== yp4||bp4==yp4+26) {
+              y4.appendChild(by4);
+              yp4=1;
+            } else if (bp4+13 == rp1||bp4==rp1+39) {
+              r1.appendChild(br1);
+              rp1=1;
+            } else if (bp4+13 == rp2||bp4==rp2+39) {
+              r2.appendChild(br2);
+              rp2=1;
+            } else if (bp4+13 == yp3||bp4==rp3+39) {
+              r3.appendChild(br3);
+              rp3=1;
+            } else if (bp4+13 == rp4||bp4==rp4+39) {
+              r4.appendChild(br4);
+              rp4=1;
+            }   
+            
+      //goti
       dis(); // Call dis() function defined elsewhere
-      bp4 += bbb;      
+      bp4=upperlimit;      
     }
   });
 });
@@ -924,7 +1115,7 @@ function numbers2() {
   bbb = Math.floor(Math.random() * 6) + 1;
   bluedice.innerHTML = bbb;
 
-  // console.log(n); // log the value of `n` here
+  // e.log(n); // log the value of `n` here
 }
 
 //green
@@ -940,8 +1131,7 @@ greendice.style.border = "3px solid black";
 greendice.style.borderRadius = "3px";
 whole.append(greendice);
 greendice.style.position = "absolute";
-greendice.style.left = "457px"; // Changed from marginRight to right
-greendice.style.top = "24px"; // Changed from marginTop to top
+greendice.style.bottom = "389px"; // Changed from marginRight to right
 //start
 var gb; // for storing dice value
 var intervalid3;
@@ -962,8 +1152,8 @@ greendice.addEventListener("click", () => {
 greenbutton.forEach((val) => {
   val.addEventListener('click', () => {
     if (val === bg1) {
-      let upperLimit = gp1 + gb;
-      for (let i = gp1; i < upperLimit; i++) {
+      let upperlimit = gp1 + gb;
+      for (let i = gp1; i < upperlimit; i++) {
         const ppp = document.querySelector(`#${greenpath[i]}`);
         ppp.appendChild(bg1); // Assuming bg1 is a DOM element
         yellowdice.disabled = false;
@@ -971,12 +1161,53 @@ greenbutton.forEach((val) => {
         reddice.disabled = true;
         greendice.disabled = true;
       }
+      gp1=upperlimit;
+        //goti1
+            //for cut pieces
+            if (gp1+39 == bp1||gp1==bp1+13) {
+              b1.appendChild(bb1);
+              bp1=1;
+            } else if (gp1+39 == bp2||gp1==bp2+13) {
+              b2.appendChild(bb2);
+              bp2=1;
+            } else if (gp1+39 == bp3||gp1==bp3+13) {
+              b3.appendChild(bb3);
+              bp3=1;
+            } else if (gp1+39 == bp4||gp1==bp4+13) {
+              b4.appendChild(bb4);
+              bp4=1;
+            } else if (gp1+26 == rp1||gp1==rp1+26) {
+              r1.appendChild(br1);  
+              rp1=1;
+            } else if (gp1+26 == rp2||gp1==rp2+26) {
+              r2.appendChild(br2);
+              rp2=1;
+            } else if (gp1+26 == rp3||gp1==rp3+26) {
+              r3.appendChild(br3);
+              rp3=1;
+            } else if (gp1 +26== rp4||gp1==rp4+26) {
+              r4.appendChild(br4);
+              rp4=1;
+            } else if (gp1+13 == yp1||gp1==yp1+39) {
+              y1.appendChild(by1);
+              yp1=1;
+            } else if (gp1+13 == yp2||gp1==yp2+39) {
+              y2.appendChild(by2);
+              yp2=1;
+            } else if (gp1+13 == yp3||gp1==yp3+39) {
+              y3.appendChild(by3);
+              yp3=1;
+            } else if (gp1+13 == yp4||gp1==yp4+39) {
+              y4.appendChild(by4);
+              yp4=1;
+            }
+            
+      //goti1
       dis(); // Call dis() function defined elsewhere
-      gp1 = upperLimit;
-      console.log(gb);
+      gp1 = upperlimit;
     } else if (val === bg2) {
-      let upperLImit = gp2+gb;
-      for (let i = gp2; i < upperLImit; i++) {
+      let upperlimit = gp2+gb;
+      for (let i = gp2; i < upperlimit; i++) {
         const ppp = document.querySelector(`#${greenpath[i]}`);
         ppp.appendChild(bg2); // Assuming bg2 is a DOM element
         yellowdice.disabled = false;
@@ -984,12 +1215,16 @@ greenbutton.forEach((val) => {
         reddice.disabled = true;
         greendice.disabled = true;
       }
+      gp2=upperlimit;
+
+
+
       dis(); // Call dis() function defined elsewhere
-      gp2 += gb;
+      gp2=upperlimit;
     } else if (val === bg3) {
       
-      let upperLImit = gp3+gb;
-      for (let i = gp3; i < upperLImit; i++) {
+      let upperlimit = gp3+gb;
+      for (let i = gp3; i < upperlimit; i++) {
         const ppp = document.querySelector(`#${greenpath[i]}`);
         ppp.appendChild(bg3); // Assuming bg2 is a DOM element
         yellowdice.disabled = false;
@@ -997,11 +1232,12 @@ greenbutton.forEach((val) => {
         reddice.disabled = true;
         greendice.disabled = true;
       }
+      gp3=upperlimit;
       dis(); // Call dis() function defined elsewhere
-      gp3 += gb;
+      gp3=upperlimit;
     } else {
-      let upperLImit = gp4+gb;
-      for (let i = gp4; i < upperLImit; i++) {
+      let upperlimit = gp4+gb;
+      for (let i = gp4; i < upperlimit; i++) {
         const ppp = document.querySelector(`#${greenpath[i]}`);
         ppp.appendChild(bg4); // Assuming bg2 is a DOM element
         yellowdice.disabled = false;
@@ -1009,8 +1245,12 @@ greenbutton.forEach((val) => {
         reddice.disabled = true;
         greendice.disabled = true;
       }
+      gp4=upperlimit;     
+
+
+
       dis(); // Call dis() function defined elsewhere
-      gp4 += gb;      
+      gp4=upperlimit;      
     }
   });
 });
@@ -1030,8 +1270,8 @@ yellowdice.style.border = "3px solid black";
 yellowdice.style.borderRadius = "3px";
 whole.append(yellowdice);
 yellowdice.style.position = "absolute";
-yellowdice.style.left = "763px"; // Changed from marginRight to right
-yellowdice.style.top = "24px"; // Changed from marginTop to to
+yellowdice.style.left = "332px"; // Changed from marginRight to right
+yellowdice.style.bottom = "389px"; // Changed from marginTop to to
 //start
 var yb;
 var intervalid4;
@@ -1039,7 +1279,7 @@ yellowdice.addEventListener("click", ()=>{
   intervalid4 = setInterval(numbers4, 100);
   setTimeout(()=>{
     clearInterval(intervalid4);
-    //console.log(yb);
+    //e.log(yb);
     by1.disabled=false;
     by2.disabled=false;
     by3.disabled=false;
@@ -1050,8 +1290,8 @@ yellowdice.addEventListener("click", ()=>{
 yellowbutton.forEach((val) => {
     val.addEventListener('click', () => {
       if (val === by1) {
-        let upperLimit = yp1 + yb;
-        for (let i = yp1; i < upperLimit; i++) {
+        let upperlimit = yp1 + yb;
+        for (let i = yp1; i < upperlimit; i++) {
           const ppp = document.querySelector(`#${yellowpath[i]}`);
           ppp.appendChild(by1); // Assuming by1 is a DOM element
           yellowdice.disabled = true;
@@ -1060,11 +1300,10 @@ yellowbutton.forEach((val) => {
           greendice.disabled = true;
         }
         dis(); // Call dis() function defined elsewhere
-        yp1 = upperLimit;
-        console.log(yb);
+        yp1 = upperlimit;
       } else if (val === by2) {
-        let upperLImit = yp2+yb;
-        for (let i = yp2; i < upperLImit; i++) {
+        let upperlimit = yp2+yb;
+        for (let i = yp2; i < upperlimit; i++) {
           const ppp = document.querySelector(`#${yellowpath[i]}`);
           ppp.appendChild(by2); // Assuming by2 is a DOM element
           yellowdice.disabled = true;
@@ -1076,8 +1315,8 @@ yellowbutton.forEach((val) => {
         yp2 += yb;
       } else if (val === by3) {
         
-        let upperLImit = yp3+yb;
-        for (let i = yp3; i < upperLImit; i++) {
+        let upperlimit = yp3+yb;
+        for (let i = yp3; i < upperlimit; i++) {
           const ppp = document.querySelector(`#${yellowpath[i]}`);
           ppp.appendChild(by3); // Assuming by3 is a DOM element
           yellowdice.disabled = true;
@@ -1088,8 +1327,8 @@ yellowbutton.forEach((val) => {
         dis(); // Call dis() function defined elsewhere
         yp3 += yb;
       } else {
-        let upperLImit = yp4+yb;
-        for (let i = yp4; i < upperLImit; i++) {
+        let upperlimit = yp4+yb;
+        for (let i = yp4; i < upperlimit; i++) {
           const ppp = document.querySelector(`#${yellowpath[i]}`);
           ppp.appendChild(by4); // Assuming by2 is a DOM element
           yellowdice.disabled = true;
