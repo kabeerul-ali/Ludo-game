@@ -1142,46 +1142,6 @@ bluebutton.forEach((val) => {
         greendice.disabled = false;
       }
       bp1 = upperlimit;
-      //goti
-      // //for cut pieces
-      // if (bp1 + 39 == gp1 || bp1 == gp1 + 13) {
-      //   g1.appendChild(bg1);
-      //   gp1 = 1;
-      // } else if (bp1 + 39 == gp2 || bp1 == gp2 + 13) {
-      //   g2.appendChild(bg2);
-      //   gp2 = 1;
-      // } else if (bp1 + 39 == gp3 || bp1 == gp3 + 13) {
-      //   g3.appendChild(bg3);
-      //   gp3 = 1;
-      // } else if (bp1 + 39 == gp4 || bp1 == gp4 + 13) {
-      //   g4.appendChild(bg4);
-      //   gp4 = 1;
-      // } else if (bp1 + 26 == yp1 || bp1 == yp1 + 26) {
-      //   y1.appendChild(by1);
-      //   yp1 = 1;
-      // } else if (bp1 + 26 == yp2 || bp1 == yp2 + 26) {
-      //   y2.appendChild(by2);
-      //   yp2 = 1;
-      // } else if (bp1 + 26 == yp3 || bp1 == yp3 + 26) {
-      //   y3.appendChild(by3);
-      //   yp3 = 1;
-      // } else if (bp1 + 26 == yp4 || bp1 == yp4 + 26) {
-      //   y4.appendChild(by4);
-      //   yp4 = 1;
-      // } else if (bp1 + 13 == rp1 || bp1 == rp1 + 39) {
-      //   r1.appendChild(br1);
-      //   rp1 = 1;
-      // } else if (bp1 + 13 == rp2 || bp1 == rp2 + 39) {
-      //   r2.appendChild(br2);
-      //   rp2 = 1;
-      // } else if (bp1 + 13 == yp3 || bp1 == rp3 + 39) {
-      //   r3.appendChild(br3);
-      //   rp3 = 1;
-      // } else if (bp1 + 13 == rp4 || bp1 == rp4 + 39) {
-      //   r4.appendChild(br4);
-      //   rp4 = 1;
-      // }
-
       //short opr
       //short operation
       let bpid = [
@@ -1230,9 +1190,6 @@ bluebutton.forEach((val) => {
         }
       }
       //opr close
-
-      //opr close
-      //goti
       dis(); // Call dis() function defined elsewhere
       bp1 = upperlimit;
     } else if (val === bb2) {
@@ -1246,46 +1203,6 @@ bluebutton.forEach((val) => {
         greendice.disabled = false;
       }
       bp2 = upperlimit;
-      //goti
-      //for cut pieces
-      // if (bp2 + 39 == gp1 || bp2 == gp1 + 13) {
-      //   g1.appendChild(bg1);
-      //   gp1 = 1;
-      // } else if (bp2 + 39 == gp2 || bp2 == gp2 + 13) {
-      //   g2.appendChild(bg2);
-      //   gp2 = 1;
-      // } else if (bp2 + 39 == gp3 || bp2 == gp3 + 13) {
-      //   g3.appendChild(bg3);
-      //   gp3 = 1;
-      // } else if (bp2 + 39 == gp4 || bp2 == gp4 + 13) {
-      //   g4.appendChild(bg4);
-      //   gp4 = 1;
-      // } else if (bp2 + 26 == yp1 || bp2 == yp1 + 26) {
-      //   y1.appendChild(by1);
-      //   yp1 = 1;
-      // } else if (bp2 + 26 == yp2 || bp2 == yp2 + 26) {
-      //   y2.appendChild(by2);
-      //   yp2 = 1;
-      // } else if (bp2 + 26 == yp3 || bp2 == yp3 + 26) {
-      //   y3.appendChild(by3);
-      //   yp3 = 1;
-      // } else if (bp2 + 26 == yp4 || bp2 == yp4 + 26) {
-      //   y4.appendChild(by4);
-      //   yp4 = 1;
-      // } else if (bp2 + 13 == rp1 || bp2 == rp1 + 39) {
-      //   r1.appendChild(br1);
-      //   rp1 = 1;
-      // } else if (bp2 + 13 == rp2 || bp2 == rp2 + 39) {
-      //   r2.appendChild(br2);
-      //   rp2 = 1;
-      // } else if (bp2 + 13 == yp3 || bp2 == rp3 + 39) {
-      //   r3.appendChild(br3);
-      //   rp3 = 1;
-      // } else if (bp2 + 13 == rp4 || bp2 == rp4 + 39) {
-      //   r4.appendChild(br4);
-      //   rp4 = 1;
-      // }
-
       //opr str
       //short operation
       let bpid = [
@@ -1334,10 +1251,6 @@ bluebutton.forEach((val) => {
         }
       }
       //opr close
-
-      //opr close
-
-      //goti
       dis(); // Call dis() function defined elsewhere
       bp2 = upperlimit;
     } else if (val === bb3) {
@@ -1351,46 +1264,6 @@ bluebutton.forEach((val) => {
         greendice.disabled = false;
       }
       bp3 = upperlimit;
-      //goti
-      //for cut pieces
-      // if (bp3 + 39 == gp1 || bp3 == gp1 + 13) {
-      //   g1.appendChild(bg1);
-      //   gp1 = 1;
-      // } else if (bp3 + 39 == gp2 || bp3 == gp2 + 13) {
-      //   g2.appendChild(bg2);
-      //   gp2 = 1;
-      // } else if (bp3 + 39 == gp3 || bp3 == gp3 + 13) {
-      //   g3.appendChild(bg3);
-      //   gp3 = 1;
-      // } else if (bp3 + 39 == gp4 || bp3 == gp4 + 13) {
-      //   g4.appendChild(bg4);
-      //   gp4 = 1;
-      // } else if (bp3 + 26 == yp1 || bp3 == yp1 + 26) {
-      //   y1.appendChild(by1);
-      //   yp1 = 1;
-      // } else if (bp3 + 26 == yp2 || bp3 == yp2 + 26) {
-      //   y2.appendChild(by2);
-      //   yp2 = 1;
-      // } else if (bp3 + 26 == yp3 || bp3 == yp3 + 26) {
-      //   y3.appendChild(by3);
-      //   yp3 = 1;
-      // } else if (bp3 + 26 == yp4 || bp3 == yp4 + 26) {
-      //   y4.appendChild(by4);
-      //   yp4 = 1;
-      // } else if (bp3 + 13 == rp1 || bp3 == rp1 + 39) {
-      //   r1.appendChild(br1);
-      //   rp1 = 1;
-      // } else if (bp3 + 13 == rp2 || bp3 == rp2 + 39) {
-      //   r2.appendChild(br2);
-      //   rp2 = 1;
-      // } else if (bp3 + 13 == yp3 || bp3 == rp3 + 39) {
-      //   r3.appendChild(br3);
-      //   rp3 = 1;
-      // } else if (bp3 + 13 == rp4 || bp3 == rp4 + 39) {
-      //   r4.appendChild(br4);
-      //   rp4 = 1;
-      // }
-
       //opr str
       //short operation
       let bpid = [
@@ -1439,9 +1312,6 @@ bluebutton.forEach((val) => {
         }
       }
       //opr close
-
-      //opr clode
-
       //goti
       dis(); // Call dis() function defined elsewhere
       bp3 = upperlimit;
@@ -1456,47 +1326,6 @@ bluebutton.forEach((val) => {
         greendice.disabled = false;
       }
       bp4 = upperlimit;
-      //goti
-      //for cut pieces
-      // if (bp4 + 39 == gp1 || bp4 == gp1 + 13) {
-      //   g1.appendChild(bg1);
-      //   gp1 = 1;
-      // } else if (bp4 + 39 == gp2 || bp4 == gp2 + 13) {
-      //   g2.appendChild(bg2);
-      //   gp2 = 1;
-      // } else if (bp4 + 39 == gp3 || bp4 == gp3 + 13) {
-      //   g3.appendChild(bg3);
-      //   gp3 = 1;
-      // } else if (bp4 + 39 == gp4 || bp4 == gp4 + 13) {
-      //   g4.appendChild(bg4);
-      //   gp4 = 1;
-      // } else if (bp4 + 26 == yp1 || bp4 == yp1 + 26) {
-      //   y1.appendChild(by1);
-      //   yp1 = 1;
-      // } else if (bp4 + 26 == yp2 || bp4 == yp2 + 26) {
-      //   y2.appendChild(by2);
-      //   yp2 = 1;
-      // } else if (bp4 + 26 == yp3 || bp4 == yp3 + 26) {
-      //   y3.appendChild(by3);
-      //   yp3 = 1;
-      // } else if (bp4 + 26 == yp4 || bp4 == yp4 + 26) {
-      //   y4.appendChild(by4);
-      //   yp4 = 1;
-      // } else if (bp4 + 13 == rp1 || bp4 == rp1 + 39) {
-      //   r1.appendChild(br1);
-      //   rp1 = 1;
-      // } else if (bp4 + 13 == rp2 || bp4 == rp2 + 39) {
-      //   r2.appendChild(br2);
-      //   rp2 = 1;
-      // } else if (bp4 + 13 == yp3 || bp4 == rp3 + 39) {
-      //   r3.appendChild(br3);
-      //   rp3 = 1;
-      // } else if (bp4 + 13 == rp4 || bp4 == rp4 + 39) {
-      //   r4.appendChild(br4);
-      //   rp4 = 1;
-      // }
-
-      //opr start
       //short operation
       let bpid = [
         br1.parentNode.id,
@@ -1544,8 +1373,6 @@ bluebutton.forEach((val) => {
         }
       }
       //opr close
-
-      //goti
       dis(); // Call dis() function defined elsewhere
       bp4 = upperlimit;
     }
@@ -1602,46 +1429,6 @@ greenbutton.forEach((val) => {
         greendice.disabled = true;
       }
       gp1 = upperlimit;
-      //goti1
-      //for cut pieces
-      // if (gp1 + 39 == bp1 || gp1 == bp1 + 13) {
-      //   b1.appendChild(bb1);
-      //   bp1 = 1;
-      // } else if (gp1 + 39 == bp2 || gp1 == bp2 + 13) {
-      //   b2.appendChild(bb2);
-      //   bp2 = 1;
-      // } else if (gp1 + 39 == bp3 || gp1 == bp3 + 13) {
-      //   b3.appendChild(bb3);
-      //   bp3 = 1;
-      // } else if (gp1 + 39 == bp4 || gp1 == bp4 + 13) {
-      //   b4.appendChild(bb4);
-      //   bp4 = 1;
-      // } else if (gp1 + 26 == rp1 || gp1 == rp1 + 26) {
-      //   r1.appendChild(br1);
-      //   rp1 = 1;
-      // } else if (gp1 + 26 == rp2 || gp1 == rp2 + 26) {
-      //   r2.appendChild(br2);
-      //   rp2 = 1;
-      // } else if (gp1 + 26 == rp3 || gp1 == rp3 + 26) {
-      //   r3.appendChild(br3);
-      //   rp3 = 1;
-      // } else if (gp1 + 26 == rp4 || gp1 == rp4 + 26) {
-      //   r4.appendChild(br4);
-      //   rp4 = 1;
-      // } else if (gp1 + 13 == yp1 || gp1 == yp1 + 39) {
-      //   y1.appendChild(by1);
-      //   yp1 = 1;
-      // } else if (gp1 + 13 == yp2 || gp1 == yp2 + 39) {
-      //   y2.appendChild(by2);
-      //   yp2 = 1;
-      // } else if (gp1 + 13 == yp3 || gp1 == yp3 + 39) {
-      //   y3.appendChild(by3);
-      //   yp3 = 1;
-      // } else if (gp1 + 13 == yp4 || gp1 == yp4 + 39) {
-      //   y4.appendChild(by4);
-      //   yp4 = 1;
-      // }
-
       //short operation
       let bpid = [
         br1.parentNode.id,
