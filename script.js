@@ -920,7 +920,7 @@ redbutton.forEach((val) => {
         greendice.disabled = true;
       }
       rp2 = upperlimit;
-      //sgort opr
+      //short operation
       let rpid = [
         bb1.parentNode.id,
         bb2.parentNode.id,
@@ -962,11 +962,12 @@ redbutton.forEach((val) => {
               rpath1[key] = 1;
               eval(`${key} = 1`);
             }
+            count++;
           }
-          count++;
         }
       }
       //opr close
+
       dis(); // Call dis() function defined elsewhere
       rp2 = upperlimit;
     } else if (val === br3) {
@@ -1373,6 +1374,8 @@ bluebutton.forEach((val) => {
         }
       }
       //opr close
+
+      //goti
       dis(); // Call dis() function defined elsewhere
       bp4 = upperlimit;
     }
@@ -1988,8 +1991,4 @@ function dis() {
   bb2.disabled = true;
   bb3.disabled = true;
   bb4.disabled = true;
-}
-function sleep(ms) {
-  const startTime = Date.now();
-  while (Date.now() - startTime < ms) {}
 }
