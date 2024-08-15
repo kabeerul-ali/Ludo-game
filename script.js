@@ -1604,43 +1604,91 @@ greenbutton.forEach((val) => {
       gp1 = upperlimit;
       //goti1
       //for cut pieces
-      if (gp1 + 39 == bp1 || gp1 == bp1 + 13) {
-        b1.appendChild(bb1);
-        bp1 = 1;
-      } else if (gp1 + 39 == bp2 || gp1 == bp2 + 13) {
-        b2.appendChild(bb2);
-        bp2 = 1;
-      } else if (gp1 + 39 == bp3 || gp1 == bp3 + 13) {
-        b3.appendChild(bb3);
-        bp3 = 1;
-      } else if (gp1 + 39 == bp4 || gp1 == bp4 + 13) {
-        b4.appendChild(bb4);
-        bp4 = 1;
-      } else if (gp1 + 26 == rp1 || gp1 == rp1 + 26) {
-        r1.appendChild(br1);
-        rp1 = 1;
-      } else if (gp1 + 26 == rp2 || gp1 == rp2 + 26) {
-        r2.appendChild(br2);
-        rp2 = 1;
-      } else if (gp1 + 26 == rp3 || gp1 == rp3 + 26) {
-        r3.appendChild(br3);
-        rp3 = 1;
-      } else if (gp1 + 26 == rp4 || gp1 == rp4 + 26) {
-        r4.appendChild(br4);
-        rp4 = 1;
-      } else if (gp1 + 13 == yp1 || gp1 == yp1 + 39) {
-        y1.appendChild(by1);
-        yp1 = 1;
-      } else if (gp1 + 13 == yp2 || gp1 == yp2 + 39) {
-        y2.appendChild(by2);
-        yp2 = 1;
-      } else if (gp1 + 13 == yp3 || gp1 == yp3 + 39) {
-        y3.appendChild(by3);
-        yp3 = 1;
-      } else if (gp1 + 13 == yp4 || gp1 == yp4 + 39) {
-        y4.appendChild(by4);
-        yp4 = 1;
+      // if (gp1 + 39 == bp1 || gp1 == bp1 + 13) {
+      //   b1.appendChild(bb1);
+      //   bp1 = 1;
+      // } else if (gp1 + 39 == bp2 || gp1 == bp2 + 13) {
+      //   b2.appendChild(bb2);
+      //   bp2 = 1;
+      // } else if (gp1 + 39 == bp3 || gp1 == bp3 + 13) {
+      //   b3.appendChild(bb3);
+      //   bp3 = 1;
+      // } else if (gp1 + 39 == bp4 || gp1 == bp4 + 13) {
+      //   b4.appendChild(bb4);
+      //   bp4 = 1;
+      // } else if (gp1 + 26 == rp1 || gp1 == rp1 + 26) {
+      //   r1.appendChild(br1);
+      //   rp1 = 1;
+      // } else if (gp1 + 26 == rp2 || gp1 == rp2 + 26) {
+      //   r2.appendChild(br2);
+      //   rp2 = 1;
+      // } else if (gp1 + 26 == rp3 || gp1 == rp3 + 26) {
+      //   r3.appendChild(br3);
+      //   rp3 = 1;
+      // } else if (gp1 + 26 == rp4 || gp1 == rp4 + 26) {
+      //   r4.appendChild(br4);
+      //   rp4 = 1;
+      // } else if (gp1 + 13 == yp1 || gp1 == yp1 + 39) {
+      //   y1.appendChild(by1);
+      //   yp1 = 1;
+      // } else if (gp1 + 13 == yp2 || gp1 == yp2 + 39) {
+      //   y2.appendChild(by2);
+      //   yp2 = 1;
+      // } else if (gp1 + 13 == yp3 || gp1 == yp3 + 39) {
+      //   y3.appendChild(by3);
+      //   yp3 = 1;
+      // } else if (gp1 + 13 == yp4 || gp1 == yp4 + 39) {
+      //   y4.appendChild(by4);
+      //   yp4 = 1;
+      // }
+
+      //short operation
+      let bpid = [
+        br1.parentNode.id,
+        br2.parentNode.id,
+        br3.parentNode.id,
+        br4.parentNode.id,
+        bb1.parentNode.id,
+        bb2.parentNode.id,
+        bb3.parentNode.id,
+        bb4.parentNode.id,
+        by1.parentNode.id,
+        by2.parentNode.id,
+        by3.parentNode.id,
+        by4.parentNode.id,
+      ];
+      let gpath1 = {
+        rp1: rp1,
+        rp2: rp2,
+        rp3: rp3,
+        rp4: rp4,
+        bp1: bp1,
+        bp2: bp1,
+        bp3: bp3,
+        bp4: bp4,
+        yp1: yp1,
+        yp2: yp2,
+        yp3: yp3,
+        yp4: yp4,
+      };
+      let spath = [r1, r2, r3, r4, b1, b2, b3, b4, y1, y2, y3, y4];
+      let count = 0;
+      for (let i = 0; i < bpid.length; i++) {
+        if (bpid[i] == bg1.parentNode.id) {
+          let x = bg1.parentElement;
+          let y = x.children[0];
+          spath[i].appendChild(y);
+          //for do  path value 1
+          for (var key in gpath1) {
+            if (count == i) {
+              gpath1[key] = 1;
+              eval(`${key} = 1`);
+            }
+            count++;
+          }
+        }
       }
+      //opr close
 
       //goti1
       dis(); // Call dis() function defined elsewhere
@@ -1656,6 +1704,53 @@ greenbutton.forEach((val) => {
         greendice.disabled = true;
       }
       gp2 = upperlimit;
+      //short operation
+      let bpid = [
+        br1.parentNode.id,
+        br2.parentNode.id,
+        br3.parentNode.id,
+        br4.parentNode.id,
+        bb1.parentNode.id,
+        bb2.parentNode.id,
+        bb3.parentNode.id,
+        bb4.parentNode.id,
+        by1.parentNode.id,
+        by2.parentNode.id,
+        by3.parentNode.id,
+        by4.parentNode.id,
+      ];
+      let gpath2 = {
+        rp1: rp1,
+        rp2: rp2,
+        rp3: rp3,
+        rp4: rp4,
+        bp1: bp1,
+        bp2: bp1,
+        bp3: bp3,
+        bp4: bp4,
+        yp1: yp1,
+        yp2: yp2,
+        yp3: yp3,
+        yp4: yp4,
+      };
+      let spath = [r1, r2, r3, r4, b1, b2, b3, b4, y1, y2, y3, y4];
+      let count = 0;
+      for (let i = 0; i < bpid.length; i++) {
+        if (bpid[i] == bg2.parentNode.id) {
+          let x = bg2.parentElement;
+          let y = x.children[0];
+          spath[i].appendChild(y);
+          //for do  path value 1
+          for (var key in gpath2) {
+            if (count == i) {
+              gpath2[key] = 1;
+              eval(`${key} = 1`);
+            }
+            count++;
+          }
+        }
+      }
+      //opr close
 
       dis(); // Call dis() function defined elsewhere
       gp2 = upperlimit;
@@ -1670,6 +1765,54 @@ greenbutton.forEach((val) => {
         greendice.disabled = true;
       }
       gp3 = upperlimit;
+      //short operation
+      let bpid = [
+        br1.parentNode.id,
+        br2.parentNode.id,
+        br3.parentNode.id,
+        br4.parentNode.id,
+        bb1.parentNode.id,
+        bb2.parentNode.id,
+        bb3.parentNode.id,
+        bb4.parentNode.id,
+        by1.parentNode.id,
+        by2.parentNode.id,
+        by3.parentNode.id,
+        by4.parentNode.id,
+      ];
+      let gpath3 = {
+        rp1: rp1,
+        rp2: rp2,
+        rp3: rp3,
+        rp4: rp4,
+        bp1: bp1,
+        bp2: bp1,
+        bp3: bp3,
+        bp4: bp4,
+        yp1: yp1,
+        yp2: yp2,
+        yp3: yp3,
+        yp4: yp4,
+      };
+      let spath = [r1, r2, r3, r4, b1, b2, b3, b4, y1, y2, y3, y4];
+      let count = 0;
+      for (let i = 0; i < bpid.length; i++) {
+        if (bpid[i] == bg3.parentNode.id) {
+          let x = bg3.parentElement;
+          let y = x.children[0];
+          spath[i].appendChild(y);
+          //for do  path value 1
+          for (var key in gpath3) {
+            if (count == i) {
+              gpath3[key] = 1;
+              eval(`${key} = 1`);
+            }
+            count++;
+          }
+        }
+      }
+      //opr close
+
       dis(); // Call dis() function defined elsewhere
       gp3 = upperlimit;
     } else {
@@ -1683,6 +1826,53 @@ greenbutton.forEach((val) => {
         greendice.disabled = true;
       }
       gp4 = upperlimit;
+      //short operation
+      let bpid = [
+        br1.parentNode.id,
+        br2.parentNode.id,
+        br3.parentNode.id,
+        br4.parentNode.id,
+        bb1.parentNode.id,
+        bb2.parentNode.id,
+        bb3.parentNode.id,
+        bb4.parentNode.id,
+        by1.parentNode.id,
+        by2.parentNode.id,
+        by3.parentNode.id,
+        by4.parentNode.id,
+      ];
+      let gpath4 = {
+        rp1: rp1,
+        rp2: rp2,
+        rp3: rp3,
+        rp4: rp4,
+        bp1: bp1,
+        bp2: bp1,
+        bp3: bp3,
+        bp4: bp4,
+        yp1: yp1,
+        yp2: yp2,
+        yp3: yp3,
+        yp4: yp4,
+      };
+      let spath = [r1, r2, r3, r4, b1, b2, b3, b4, y1, y2, y3, y4];
+      let count = 0;
+      for (let i = 0; i < bpid.length; i++) {
+        if (bpid[i] == bg4.parentNode.id) {
+          let x = bg4.parentElement;
+          let y = x.children[0];
+          spath[i].appendChild(y);
+          //for do  path value 1
+          for (var key in gpath4) {
+            if (count == i) {
+              gpath4[key] = 1;
+              eval(`${key} = 1`);
+            }
+            count++;
+          }
+        }
+      }
+      //opr close
 
       dis(); // Call dis() function defined elsewhere
       gp4 = upperlimit;
@@ -1734,6 +1924,55 @@ yellowbutton.forEach((val) => {
         reddice.disabled = false;
         greendice.disabled = true;
       }
+      yp1 = upperlimit;
+      //short operation
+      let bpid = [
+        br1.parentNode.id,
+        br2.parentNode.id,
+        br3.parentNode.id,
+        br4.parentNode.id,
+        bb1.parentNode.id,
+        bb2.parentNode.id,
+        bb3.parentNode.id,
+        bb4.parentNode.id,
+        bg1.parentNode.id,
+        bg2.parentNode.id,
+        bg3.parentNode.id,
+        bg4.parentNode.id,
+      ];
+      let ypath1 = {
+        rp1: rp1,
+        rp2: rp2,
+        rp3: rp3,
+        rp4: rp4,
+        bp1: bp1,
+        bp2: bp1,
+        bp3: bp3,
+        bp4: bp4,
+        gp1: yp1,
+        gp2: yp2,
+        gp3: yp3,
+        gp4: yp4,
+      };
+      let spath = [r1, r2, r3, r4, b1, b2, b3, b4, g1, g2, g3, g4];
+      let count = 0;
+      for (let i = 0; i < bpid.length; i++) {
+        if (bpid[i] == by1.parentNode.id) {
+          let x = by1.parentElement;
+          let y = x.children[0];
+          spath[i].appendChild(y);
+          //for do  path value 1
+          for (var key in ypath1) {
+            if (count == i) {
+              ypath1[key] = 1;
+              eval(`${key} = 1`);
+            }
+            count++;
+          }
+        }
+      }
+      //opr close
+
       dis(); // Call dis() function defined elsewhere
       yp1 = upperlimit;
     } else if (val === by2) {
@@ -1746,8 +1985,57 @@ yellowbutton.forEach((val) => {
         reddice.disabled = false;
         greendice.disabled = true;
       }
+      yp2 = upperlimit;
+      //short operation
+      let bpid = [
+        br1.parentNode.id,
+        br2.parentNode.id,
+        br3.parentNode.id,
+        br4.parentNode.id,
+        bb1.parentNode.id,
+        bb2.parentNode.id,
+        bb3.parentNode.id,
+        bb4.parentNode.id,
+        bg1.parentNode.id,
+        bg2.parentNode.id,
+        bg3.parentNode.id,
+        bg4.parentNode.id,
+      ];
+      let ypath2 = {
+        rp1: rp1,
+        rp2: rp2,
+        rp3: rp3,
+        rp4: rp4,
+        bp1: bp1,
+        bp2: bp1,
+        bp3: bp3,
+        bp4: bp4,
+        gp1: yp1,
+        gp2: yp2,
+        gp3: yp3,
+        gp4: yp4,
+      };
+      let spath = [r1, r2, r3, r4, b1, b2, b3, b4, g1, g2, g3, g4];
+      let count = 0;
+      for (let i = 0; i < bpid.length; i++) {
+        if (bpid[i] == by2.parentNode.id) {
+          let x = by2.parentElement;
+          let y = x.children[0];
+          spath[i].appendChild(y);
+          //for do  path value 1
+          for (var key in ypath2) {
+            if (count == i) {
+              ypath2[key] = 1;
+              eval(`${key} = 1`);
+            }
+            count++;
+          }
+        }
+      }
+      //opr close
+
       dis(); // Call dis() function defined elsewhere
-      yp2 += yb;
+      yp2 = upperlimit;
     } else if (val === by3) {
       let upperlimit = yp3 + yb;
       for (let i = yp3; i < upperlimit; i++) {
@@ -1758,8 +2046,57 @@ yellowbutton.forEach((val) => {
         reddice.disabled = false;
         greendice.disabled = true;
       }
+      yp3 = upperlimit;
+      //short operation
+      let bpid = [
+        br1.parentNode.id,
+        br2.parentNode.id,
+        br3.parentNode.id,
+        br4.parentNode.id,
+        bb1.parentNode.id,
+        bb2.parentNode.id,
+        bb3.parentNode.id,
+        bb4.parentNode.id,
+        bg1.parentNode.id,
+        bg2.parentNode.id,
+        bg3.parentNode.id,
+        bg4.parentNode.id,
+      ];
+      let ypath3 = {
+        rp1: rp1,
+        rp2: rp2,
+        rp3: rp3,
+        rp4: rp4,
+        bp1: bp1,
+        bp2: bp1,
+        bp3: bp3,
+        bp4: bp4,
+        gp1: yp1,
+        gp2: yp2,
+        gp3: yp3,
+        gp4: yp4,
+      };
+      let spath = [r1, r2, r3, r4, b1, b2, b3, b4, g1, g2, g3, g4];
+      let count = 0;
+      for (let i = 0; i < bpid.length; i++) {
+        if (bpid[i] == by3.parentNode.id) {
+          let x = by3.parentElement;
+          let y = x.children[0];
+          spath[i].appendChild(y);
+          //for do  path value 1
+          for (var key in ypath3) {
+            if (count == i) {
+              ypath3[key] = 1;
+              eval(`${key} = 1`);
+            }
+            count++;
+          }
+        }
+      }
+      //opr close
+
       dis(); // Call dis() function defined elsewhere
-      yp3 += yb;
+      yp3 = upperlimit;
     } else {
       let upperlimit = yp4 + yb;
       for (let i = yp4; i < upperlimit; i++) {
@@ -1770,8 +2107,57 @@ yellowbutton.forEach((val) => {
         reddice.disabled = false;
         greendice.disabled = true;
       }
+      yp4 = upperlimit;
+      //short operation
+      let bpid = [
+        br1.parentNode.id,
+        br2.parentNode.id,
+        br3.parentNode.id,
+        br4.parentNode.id,
+        bb1.parentNode.id,
+        bb2.parentNode.id,
+        bb3.parentNode.id,
+        bb4.parentNode.id,
+        bg1.parentNode.id,
+        bg2.parentNode.id,
+        bg3.parentNode.id,
+        bg4.parentNode.id,
+      ];
+      let ypath4 = {
+        rp1: rp1,
+        rp2: rp2,
+        rp3: rp3,
+        rp4: rp4,
+        bp1: bp1,
+        bp2: bp1,
+        bp3: bp3,
+        bp4: bp4,
+        gp1: yp1,
+        gp2: yp2,
+        gp3: yp3,
+        gp4: yp4,
+      };
+      let spath = [r1, r2, r3, r4, b1, b2, b3, b4, g1, g2, g3, g4];
+      let count = 0;
+      for (let i = 0; i < bpid.length; i++) {
+        if (bpid[i] == by4.parentNode.id) {
+          let x = by4.parentElement;
+          let y = x.children[0];
+          spath[i].appendChild(y);
+          //for do  path value 1
+          for (var key in ypath4) {
+            if (count == i) {
+              ypath4[key] = 1;
+              eval(`${key} = 1`);
+            }
+            count++;
+          }
+        }
+      }
+      //opr close
+
       dis(); // Call dis() function defined elsewhere
-      yp4 += yb;
+      yp4 = upperlimit;
     }
   });
 });
