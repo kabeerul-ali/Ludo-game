@@ -1,47 +1,38 @@
 # Ludo Game
 
-A simple and fun Ludo game built using JavaScript, HTML, and CSS. Enjoy playing the classic board game with friends and family online!
+Welcome to the Ludo Game project! This repository contains the code and assets for a two-player Ludo game implemented in JavaScript. The game is currently a work in progress, and there are several features that are still being refined.
 
 ## Table of Contents
 
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
+- [Introduction](#introduction)
+- [Files Overview](#files-overview)
+- [Usage Instructions](#usage-instructions)
 - [Contributing](#contributing)
 - [License](#license)
 
-## Features
+## Introduction
 
-- Play with 2 to 4 players
-- Roll the dice and move your pieces
-- Game logic for safe spots and home
-- Colorful and interactive UI
-- Responsive design for various devices
+Ludo is a classic board game that can be played by two or more players. The objective of the game is to move all of your pieces from the starting point to the home area based on the rolls of a die. This project aims to replicate the Ludo experience in a web-based format.
 
-## Technologies Used
+### Current Status
 
-- **HTML**: Structure of the game
-- **CSS**: Styling and layout
-- **JavaScript**: Game functionality and logic
+The game is functional for two players but still requires some adjustments to improve gameplay and fix bugs. Contributions and feedback are welcome!
 
-## Installation
+## Files Overview
 
-To get a local copy up and running, follow these steps:
+The following files are included in this repository:
 
-1. Clone the repository
+- **image/**: Directory containing images used in the game.
+- **2player.js**: JavaScript file that contains the logic for the two-player game. Note that it is still being improved.
+- **index.html**: The main HTML file that serves as the entry point for the game.
+- **safe.js**: JavaScript file related to safe positions in the game. Currently, the implementation is incomplete.
+- **script.js**: General JavaScript file that handles various game operations and features.
+- **style.css**: CSS file for styling the game interface.
+- **temp.js**: Temporary JavaScript file used for testing purposes.
+- **try.js**: Another JavaScript file for experimenting with game features.
+
+## Usage Instructions
+
+1. Clone this repository to your local machine using the following command:
    ```bash
    git clone https://github.com/your-username/ludo-game.git
-   ```
-2. Navigate to the project directory
-   ```bash
-   cd ludo-game
-   ```
-3. Open `index.html` in your web browser.
-
-## Usage
-
-1. Open the game in your preferred web browser.
-2. Select the number of players.
-3. Roll the dice to start moving your pieces around the board.
-4. Follow game rules to win!
