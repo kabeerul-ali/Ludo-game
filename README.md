@@ -1,4 +1,4 @@
-# Ludo Game
+# my-project
 
 Welcome to the Ludo Game project! This repository contains the code and assets for a two-player Ludo game implemented in JavaScript. The game is currently a work in progress, and there are several features that are still being refined.
 
